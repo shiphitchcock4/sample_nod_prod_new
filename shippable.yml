@@ -18,11 +18,34 @@ env:
     - GOO=GUBU
 
 
+
 build:
-  ci:
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock2_sample_node2.
+
+  pre_ci_boot:
+    image_name: shippabledocker/shiphitchcock2_sample_node2
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+    
+    
+   ci:
     - node --version
     - echo $FOO
     - echo $M1  
-   
-    
-  
+    - ps -eax
+    - ls -al
+
+  post_ci:
+   # - docker build -t=shippabledocker/shiphitchcock2_sample_node2
+    - docker push shippabledocker/shiphitchcock2_sample_node2
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
+
+ 
+
+
