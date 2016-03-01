@@ -12,11 +12,13 @@ node_js:
 matrix:
   allow_failures:
     - node_js: 0.10
+    - node_js: 0.12
 
 
 build:
   ci:
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.10" ]; then foobar; fi
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
     - node --version
    
   
