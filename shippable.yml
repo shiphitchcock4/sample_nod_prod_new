@@ -10,15 +10,14 @@ node_js:
   - iojs-v3
   - 5.0
 matrix:
- exclude:
-  - node_js: 0.10
-  - node_js: 0.12
+  allow_failures:
+    - node_js: 0.10
 
 
 build:
   ci:
     - node --version
-    
+    - thehkjk
    
     
   
