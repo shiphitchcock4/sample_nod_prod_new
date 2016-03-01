@@ -18,5 +18,5 @@ build:
   ci:
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.10" ]; then foobar; fi
     - node --version
-    - thehk   
+   
   
