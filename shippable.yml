@@ -30,11 +30,10 @@ build:
   post_ci:
     - docker push quay.io/shippablequay/hitchcock2_sample_nodequay
 
-
 integrations:
   hub:
     - integrationName: ship-quay
-      type: quay
+      type: quay.io
   
  
 
