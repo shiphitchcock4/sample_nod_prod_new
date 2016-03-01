@@ -17,7 +17,7 @@ build:
  #   - docker build -t=quay.io/shippablequay/hitchcock2_sample_node .
 
   pre_ci_boot:
-    image_name: quay.io/shippablequay/hitchcock2_sample_node
+    image_name: quay.io/shippablequay/hitchcock2_sample_nodeq1
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -28,8 +28,8 @@ build:
     - ls -al
 
   post_ci:
-    - docker build -t=quay.io/shippablequay/hitchcock2_sample_node .
-    - docker push quay.io/shippablequay/hitchcock2_sample_node
+    - docker build -t=quay.io/shippablequay/hitchcock2_sample_nodeq1 .
+    - docker push quay.io/shippablequay/hitchcock2_sample_nodeq1
 
 
 integrations:
