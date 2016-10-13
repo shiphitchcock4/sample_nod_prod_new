@@ -1,0 +1,3 @@
+[submodule "sampleSca"]
+	path = sampleSca
+	url = https://github.com/shiphitchcock4/sampleSca.git
